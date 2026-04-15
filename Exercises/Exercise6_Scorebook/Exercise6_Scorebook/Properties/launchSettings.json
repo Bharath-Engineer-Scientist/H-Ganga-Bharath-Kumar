@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Exercise6_Scorebook": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+﻿Console.WriteLine("Welcome to Book IPL Registration");
+Console.Write("Enter name: ");
+string playerName = Console.ReadLine();
+Console.Write("Enter age: ");
+int playerAge = int.Parse(Console.ReadLine());
+Console.Write("Enter jersey number: ");
+int jerseyNumber = int.Parse(Console.ReadLine());
+Console.WriteLine("\n--- Player Card ---");
+Console.WriteLine($"Name   : {playerName}");
+Console.WriteLine($"Age    : {playerAge}");
+Console.WriteLine($"Jersey : {jerseyNumber}");
+Console.WriteLine("-------------------");

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Exercise2_Umpire": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

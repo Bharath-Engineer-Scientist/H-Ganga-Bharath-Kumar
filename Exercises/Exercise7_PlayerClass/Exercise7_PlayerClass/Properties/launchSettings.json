@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Exercise7_PlayerClass": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

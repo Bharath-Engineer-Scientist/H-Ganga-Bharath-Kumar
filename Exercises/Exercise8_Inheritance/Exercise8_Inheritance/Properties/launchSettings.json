@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Exercise8_Inheritance": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

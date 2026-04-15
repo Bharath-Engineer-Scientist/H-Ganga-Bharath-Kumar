@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Exercise5_SquadList": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

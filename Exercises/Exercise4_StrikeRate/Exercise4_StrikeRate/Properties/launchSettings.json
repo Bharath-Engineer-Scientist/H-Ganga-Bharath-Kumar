@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Exercise4_StrikeRate": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
