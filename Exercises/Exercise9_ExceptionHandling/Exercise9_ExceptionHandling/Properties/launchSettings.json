@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Exercise9_ExceptionHandling": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
