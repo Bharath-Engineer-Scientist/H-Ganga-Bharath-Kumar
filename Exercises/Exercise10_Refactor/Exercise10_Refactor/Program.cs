@@ -8,13 +8,13 @@
         for (int i = 1; i <= 6; i++)
         {
             if (player.IsOut) break;
-            Console.Write($"Ball {i} - Enter page digit (0-9): ");
+            Console.Write($"Ball {i} - Enter page digit: ");
             int digit = int.Parse(Console.ReadLine());
             int runs = engine.GetScore(digit);
             if (runs == -1)
             {
                 player.GetDismissed();
-                Console.WriteLine("OUT!");
+                Console.WriteLine("Out");
             }
             else
             {
@@ -46,7 +46,7 @@ class Player
     }
     public void Describe()
     {
-        string status = IsOut ? "OUT" : "Not out";
+        string status = IsOut ? "Out" : "Not out";
         Console.WriteLine($"\n{Name} | Final Score: {Score} | Status: {status}");
     }
 }

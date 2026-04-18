@@ -7,7 +7,7 @@ if (score = 6)
 int score = 6;
 if (score == 6)
 {
-    Console.WriteLine("Boundary!");
+    Console.WriteLine("Boundary");
 }
 else
 {

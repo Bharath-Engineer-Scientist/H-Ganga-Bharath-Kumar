@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "BookIPL_Procedural": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

@@ -2,8 +2,8 @@
 {
     static void Main(string[] args)
     {
-        int validDigit = AskForDigit("Enter the last digit of the book page (0-9): ");
-        Console.WriteLine($"Success! You entered a valid digit: {validDigit}");
+        int validDigit = AskForDigit("Enter the last digit of the book page: ");
+        Console.WriteLine($"Success, You entered a valid digit: {validDigit}");
     }
     static int AskForDigit(string prompt)
     {

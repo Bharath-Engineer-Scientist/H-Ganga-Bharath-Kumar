@@ -19,7 +19,7 @@
         Console.Write("Wickets: ");
         int wickets = int.Parse(Console.ReadLine());
         team.Add(new Bowler(boName, boJersey, wickets));
-        Console.WriteLine("\n    Team Introduction    ");
+        Console.WriteLine("\nThis is the team Introduction:");
         foreach (Cricketer player in team)
         {
             player.Introduce();

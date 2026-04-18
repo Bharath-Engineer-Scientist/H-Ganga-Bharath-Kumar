@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Exercise1_OOPRefactor": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

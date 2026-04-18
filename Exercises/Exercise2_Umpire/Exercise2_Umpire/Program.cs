@@ -1,5 +1,5 @@
-﻿Console.WriteLine("  Umpire Signal System  ");
-Console.Write("Enter the last digit of the page number (0-9): ");
+﻿Console.WriteLine("--- Umpire Signal System ---");
+Console.Write("Enter the last digit of page number: ");
 int digit = int.Parse(Console.ReadLine());
 switch (digit)
 {

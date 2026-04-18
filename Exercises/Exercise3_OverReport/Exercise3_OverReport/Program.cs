@@ -3,7 +3,7 @@ int dotBalls = 0;
 int boundaries = 0;
 bool isOut = false;
 int ballsFaced = 0;
-Console.WriteLine("    Over Simulation    ");
+Console.WriteLine("--- Over Simulation ---");
 for (int ball = 1; ball <= 6; ball++)
 {
     Console.Write($"Ball {ball}: Enter digit: ");
@@ -12,7 +12,7 @@ for (int ball = 1; ball <= 6; ball++)
     if (digit == 0)
     {
         isOut = true;
-        Console.WriteLine("Out innings over.");
+        Console.WriteLine("Out  and innings over.");
         break;
     }
     else if (digit % 2 == 0)
