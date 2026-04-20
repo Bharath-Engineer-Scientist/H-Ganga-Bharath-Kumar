@@ -10,38 +10,34 @@ namespace Exercise1_OOPRefactor
         public int TotalScore { get; private set; }
         public bool IsOut { get; private set; }
         public int BallsPlayed => Balls.Count;
-        public double StrikeRate => BallsPlayed == 0 ? 0 : Math.Round((TotalScore / (double)BallsPlayed) * 100, 1);
-        public int Boundaries => Balls.Count(b => b.Runs == 4 || b.Runs == 6);
         public Innings(string playerName) => PlayerName = playerName;
-        public void Play()
+        private string FormatBallRow(int ballNum, string runText, string resultText)
         {
-            while (BallsPlayed < 6 && !IsOut)
-            {
-                Console.WriteLine("\nPress any key to flip");
-                Console.ReadKey(true);
-                int digit = ScoreEngine.FlipPage();
-                Ball ball = new Ball(digit);
-                Balls.Add(ball);
-                string commentary = CommentaryEngine.GetCommentary(ball.Result, ball.Runs);
-                Console.WriteLine($">>> {commentary}");
-                if (ball.Result == BallResult.Out)
-                    IsOut = true;
-                else
-                    TotalScore += ball.Runs;
-                Console.WriteLine($"Ball {BallsPlayed}: {ball} (Total: {TotalScore})");
-            }
+            string col1 = $"Ball {ballNum}".PadRight(8);
+            string col2 = $"{runText} runs".PadLeft(10);
+            string col3 = resultText.PadLeft(12);
+            return $" {col1} | {col2} | {col3}";
         }
         public void Scorecard()
         {
-            Console.WriteLine($" SCORECARD: {PlayerName.ToUpper()}");
+            string separator = new string('=', 40);
+            Console.WriteLine($"\n{separator}");
+            Console.WriteLine("BOOK IPL SCORECARD".PadLeft(28));
+            Console.WriteLine(separator);
             for (int i = 0; i < Balls.Count; i++)
             {
-                Console.WriteLine($"Ball {i + 1}".PadRight(8) + $" | {Balls[i]}".PadLeft(10));
+                Ball b = Balls[i];
+                string runDisplay = b.Result == BallResult.Out ? "0" : b.Runs.ToString();
+                string resultDisplay = b.Result == BallResult.Out ? "OUT" : (b.Runs >= 4 ? "BOUNDARY!" : "---");
+
+                Console.WriteLine(FormatBallRow(i + 1, runDisplay, resultDisplay));
             }
-            Console.WriteLine($"Total Score: {TotalScore}");
-            Console.WriteLine($"Boundaries : {Boundaries}");
-            Console.WriteLine($"Strike Rate: {StrikeRate}");
-            Console.WriteLine($"Status     : {(IsOut ? "Out" : "Not Out")}");
+            Console.WriteLine(separator);
+            Console.WriteLine($" Player  : {PlayerName}");
+            Console.WriteLine($" Score   : {TotalScore}");
+            Console.WriteLine($" Balls   : {BallsPlayed}");
+            Console.WriteLine($" Result  : {(IsOut ? "OUT" : "NOT OUT")}");
+            Console.WriteLine(separator + "\n");
         }
     }
 }
